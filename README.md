@@ -3,7 +3,8 @@
 Prototipo de software para barberías con un diseño elegante y profesional.
 
 ## Cómo verlo en tu PC
-1. Abre una terminal **en esta carpeta** (la que contiene `index.html`).
+1. Abre una terminal **en la carpeta que contiene `index.html`**.
+   - Si descomprimiste un ZIP y ves una carpeta como `LOJO-main`, entra ahí primero.
 2. Ejecuta un servidor local:
 
 ```bash
@@ -21,6 +22,13 @@ python3 -m http.server 8000
   entra a la carpeta del proyecto (donde está `index.html`) y vuelve a ejecutar el comando.
   Si arrancaste el servidor **un nivel arriba**, la URL correcta sería:
   `http://localhost:8000/LOJO-main/index.html`.
+- **No encuentro `index.html`**: busca dentro de la carpeta `LOJO-main` (o similar) y
+  abre una terminal allí. En Windows puedes usar:
+  ```powershell
+  dir
+  ```
+  Si no aparece, asegúrate de haber **extraído el ZIP** y de estar dentro de la carpeta
+  correcta.
 
 ## Convertirlo a `.exe` (Windows)
 Este proyecto es una página web estática. Para ejecutarla como app de escritorio, puedes
