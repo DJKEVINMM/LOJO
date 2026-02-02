@@ -21,3 +21,23 @@ python3 -m http.server 8000
   entra a la carpeta del proyecto (donde está `index.html`) y vuelve a ejecutar el comando.
   Si arrancaste el servidor **un nivel arriba**, la URL correcta sería:
   `http://localhost:8000/LOJO-main/index.html`.
+
+## Convertirlo a `.exe` (Windows)
+Este proyecto es una página web estática. Para ejecutarla como app de escritorio, puedes
+envolverla en un contenedor tipo navegador.
+
+### Opción rápida con Nativefier (recomendada)
+1. Instala Node.js (LTS): https://nodejs.org
+2. Abre PowerShell en la carpeta del proyecto y ejecuta:
+
+```bash
+npx nativefier --name "BarberiaElite" --platform windows --arch x64 --single-instance "index.html"
+```
+
+3. Se generará una carpeta como `BarberiaElite-win32-x64`. Dentro tendrás `BarberiaElite.exe`.
+
+> Si deseas icono propio, agrega `--icon ruta/al/icono.ico`.
+
+### Opción con Tauri (más avanzada)
+Tauri crea ejecutables livianos pero requiere configurar un proyecto Rust/Node.
+Guía oficial: https://tauri.app
